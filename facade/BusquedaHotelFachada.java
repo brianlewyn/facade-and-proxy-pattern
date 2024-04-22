@@ -16,4 +16,11 @@ public class BusquedaHotelFachada {
         return hotelDatabase.buscarHoteles("", puntuacion);
     }
 
+    public void reservarHotel(Hotel hotel, int numHabitaciones, String fechaInicio, String fechaFin) {
+        hotelDatabase.reservarHotel(hotel, numHabitaciones, fechaInicio, fechaFin);
+    }
+
+    public Reserva getReserva(int indice) {
+        return hotelDatabase.getReserva(indice);
+    }
 }

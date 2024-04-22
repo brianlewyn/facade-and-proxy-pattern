@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class HotelDatabase {
 
     private ArrayList<Hotel> hoteles = new ArrayList<>();
+    private ArrayList<Reserva> reservas = new ArrayList<>();
 
     public HotelDatabase() {
         hoteles.add(new Hotel("Hotel A", "Cancun", 4));
@@ -25,4 +26,11 @@ public class HotelDatabase {
         return hotelesEncontrados;
     }
 
+    public void reservarHotel(Hotel hotel, int numHabitaciones, String fechaInicio, String fechaFin) {
+        reservas.add(new Reserva(hotel, numHabitaciones, fechaInicio, fechaFin));
+    }
+
+    public Reserva getReserva(int indice) {
+        return reservas.get(indice);
+    }
 }

@@ -91,9 +91,17 @@ public class Main {
         ICourse guest = getGuestProxy(course);
 
         guest.showCourseSummary();
+        // System.out.println("Title: " + guest.getTitle() + "\n");
+        // System.out.println("Level: " + guest.getLevel());
+        // System.out.println("Language: " + guest.getLanguage());
+        // System.out.println("Description: " + guest.getDescription());
+        // System.out.println("Prerequisites: " + guest.getPrerequisites());
 
         try {
             guest.showCourseDetails();
+            // System.out.println("Certificate: " + guest.getCertificate());
+            // System.out.println("Content: " + guest.getContent());
+            // System.out.println("Video: " + guest.getVideo());
 
         } catch (Exception e) {
             System.out.println("Run showCourseDetails() method");
@@ -108,9 +116,15 @@ public class Main {
         ICourse student = getStudentProxy(course);
 
         student.downloadCertificate();
+        // student.downloadContent();
+        // student.downloadVideo();
 
         try {
             student.setTitle("Python is the best programming language");
+            // student.setLevel("Advanced");
+            // student.setLanguage("Spanish");
+            // student.setDescription("Python Programming for Advanced Users");
+            // student.setPrerequisites("Intermediate Programming Knowledge");
 
         } catch (Exception e) {
             System.out.println("Title ramains: " + student.getTitle());
@@ -127,8 +141,16 @@ public class Main {
         professor.setVideo("C Programming Video Updated\n");
         System.out.println("Video changed to: " + professor.getVideo());
 
+        // professor.setTitle("C Programming for Advanced Users");
+        // professor.setLevel("Advanced");
+        // professor.setLanguage("Spanish");
+        // professor.setDescription("C Programming for Advanced Users");
+        // professor.setPrerequisites("Intermediate Programming Knowledge");
+
         try {
             professor.downloadContent();
+            // professor.downloadCertificate();
+            // professor.downloadVideo();
 
         } catch (Exception e) {
             System.out.println("Run downloadContent() method");
